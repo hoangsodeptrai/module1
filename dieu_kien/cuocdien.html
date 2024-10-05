@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Mời nhập số điện của bạn" id="sodien">
+    <button onclick="check()" ></button>
+    <h6 >Phí điện 25.000/1 số</h6>
+    <h2 id="dien"></h2>
+    <script>
+        function check(){
+            let a = +document.getElementById("sodien").value
+            let tiendien = a * 25000;
+            document.getElementById("dien").innerText = "Số tiền điện phải trả là " + tiendien;
+        }
+    </script>
+
+</body>
+</html>

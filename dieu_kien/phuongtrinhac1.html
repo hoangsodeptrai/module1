@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="number" placeholder="Nhập a" id="a" >
+    <input type="number" placeholder="Nhập b" id="b">
+    
+    <button onclick="check()">Check</button>
+    <h3 id="no">kết quả</h3>
+    <script>
+        function check(){
+            let a = +document.getElementById("a").value;
+            let b = +document.getElementById("b").value;
+            let x = -b/a;
+            if(a===0){
+                alert("Phương trình vô nghiệm");
+            } else {
+                document.getElementById("no").innerText="Phương trình có 1 nghiệm duy nhất là " + x;
+            }
+        } -->
+        <input type="number" placeholder="Nhập a" id="a" >
+    <input type="number" placeholder="Nhập b" id="b">
+    <input type="number" placeholder="nhap c" id="c">
+    <button onclick="check()">Check</button>
+    <h3 id="no">kết quả</h3>
+    <script>
+        function check(){
+            let a = +document.getElementById("a").value;
+            let b = +document.getElementById("b").value;
+            let c= +document.getElementById("c").value;
+            let delta = (b*b)-(4*a*c);
+            if(delta<0){
+                alert("Phương trình vô nghiệm");
+            } else if(delta>0){
+                let x1 =(-b+ Math .sqrt( delta )) / (2*a);
+                let x2 =(-b- Math .sqrt( delta )) / (2*a);
+                document.getElementById("no").innerText="Phương trình có 2 nghiệm pb là " + "x1= "+x1+" x2= "+x2;
+            } else {
+                let x3 = -b / (2*a);
+                alert("Phương trình có nghiệm kép x1 = x2 " + x3);
+            };
+        }
+
+    </script>
+</body>
+</html>

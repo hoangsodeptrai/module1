@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập doanh thu số tiền" id="sotien" >
+    <button onclick="check()">Nhấn để check </button>
+    <h3  id="ketqua">Số tiền hoa hoàng nhận được</h3>
+    <script>
+        //Tính hoa hồng nhận được theo mức doanh số bán hàng
+        function check(){
+            let sotiendt = +document.getElementById("sotien").value;
+            alert(sotiendt);
+            if (sotiendt>=200){
+                let hoahong = sotiendt * 0.5;
+                document.getElementById("ketqua").innerText="Số tiền hoa hoàng nhận được là " +hoahong+" triệu";
+            } else if(sotiendt>=100){
+                let hoahong = sotiendt * 0.2;
+                document.getElementById("ketqua").innerText="Số tiền hoa hồng nhận được là "+hoahong+" triệu";
+            } else{
+                let hoahong =sotiendt * 0.1;
+                document.getElementById("ketqua").innerText="số tiền hoa hồng nhận đc là "+hoahong+" trieu"
+
+            }
+        }
+
+    </script>
+</body>
+</html>

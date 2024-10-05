@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Xếp hạng học lực hs dựa trên số điểm bài kiểm tra giữa kỳ và cuối kỳ
+        let a =+prompt("Nhập điểm kiểm tra")
+        let b =+prompt("nHẬP ĐIỂM KIỂM TRA GIỮA KỲ")
+        let c =+prompt("Nhập điểm kiểm tra cuối kỳ")
+        let d = (a + b + c)/3
+        if(d<6.5){
+            alert("bạn học siinh TB");
+        }else if (d<8){
+            alert("bạn học sinh tiên tiến");
+        }else if (d<=10){
+            alert("bạn học sinh gioi");
+        } else {
+            alert("Bạn học sinh yếu");
+        }
+    </script>
+</body>
+</html>

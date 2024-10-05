@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Mời nhập chỉ số cân nặng" id="chiso" >
+    <button onclick="check()" >Check</button>
+    <h3 id="ngu">Bạn</h3>
+    <script>
+        function check(){
+            let cannang=+document.getElementById("chiso").value
+            if (cannang<=18){
+                document.getElementById("ngu").innerText="bạn thieu can (Chỉ số của bạn là) " + cannang;
+            } else if (cannang<=24.4){
+                document.getElementById("ngu").innerText="bạn binh thường";
+            } else if (cannang<=29){
+                document.getElementById("ngu").innerText="Bạn thừa cân";
+            } else if(cannang>=30){
+                document.getElementById("ngu").innerText="Bạn béo phì hơn mý và gwen";
+            }
+        }
+
+    </script>
+</body>
+</html>
