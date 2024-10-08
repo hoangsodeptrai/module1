@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function replace(arr){
+            return arr.map(char => (char === '-')? '_' : char);
+
+        }
+        let inputString = prompt('yêu cầu nhập ào 1 chuỗi cách nhau = dấu phẩy');
+        let delArray = inputString.split((',').map(char=>char.trim()));
+        let updateArray = replace(arr);
+        console.log("Mảng là "+ updateArray);
+    </script>
+</body>
+</html>
