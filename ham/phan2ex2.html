@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="number" placeholder="Mời nhập bán kính" id="bankinh" /> <span><button onclick="tinhDienTichHt()">Tính Diện Tích</button></span> <br>
+    <input type="number" placeholder="Mời nhập đường kính" id="duongkinh" /> <button onclick="tinhChuViHt()" >Tính Chu Vi</button>
+    <script>
+      // Bài 2: Viết hàm tính diện tích, hàm tính chu vi hình tròn. Gọi hàm vừa xây dựng được
+      function tinhDienTichHt() {
+        let bankinh = +document.getElementById("bankinh").value;
+        let dtHt = bankinh * bankinh * 3.14;
+        alert("Diện tích hình tròn là " + dtHt);
+        return dtHt;
+      }
+      function tinhChuViHt(){
+        let duongkinh = +document.getElementById("duongkinh").value;
+        let chuviht = 3.14 * duongkinh;
+        alert("Chu vi hình tròn là " + chuviht);
+        return chuvihtl;
+      }
+    </script>
+  </body>
+</html>
