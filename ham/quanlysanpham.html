@@ -6,8 +6,57 @@
     <title>Document</title>
 </head>
 <body>
+    <input type="text" placeholder="add product " id="additem"> <button onclick="addProduct()">Add</button>
+    <h6 id="soluong"></h6>
+    <p id="result1"></p>
     
+    </table>
     <script>
+        let productList =["Iphone","Nokie","Xiaomie"];
+        display(productList,'result1');
+
+        function addProduct(){
+            let product2 = document.getElementById("additem").value;
+            if(product2 != ""){
+                productList.push(product2);
+            } else {
+                alert("Xin mời nhập sản phẩm");
+            }
+            display(productList);
+           
+
+        }
+        function display(list){
+           let tableString = `<table border="1" style="border-collapse: collapse;" >
+        <tr>
+            <th>Product</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>`;
+        for (let i=0;i<productList.length;i++){
+            tableString += `
+        <tr>
+            <th>${list[i]}</th>
+            <th><button onclick="editProduct(${i})">Edit</button></th>
+            <th><button onclick="deleteProduct(${i})" >Deleteii</button></th>
+        </tr>`;
+        }
+        document.getElementById("result1").innerHTML = tableString;
+        document.getElementById("soluong").innerHTML = "Số lượng sản phẩm đang có là "+productList.length;
+        }
+        function deleteProduct(index){
+            let conf = confirm("Bạn có chắc chắn xoá sản phẩm không " + productList[index] +" ?")
+            if(conf){
+                productList.splice(index, 1);
+            }
+            display(productList);
+        }
+        function editProduct(index){
+            let edit = prompt("mời sửa lại sản phẩm");
+            productList[index] = edit;
+            display(productList);
+        }
+        
 
     </script>
 </body>
