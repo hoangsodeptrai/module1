@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class hinhChuNhat {
+            constructor(chieuDai, chieuRong) {
+                this.chieudai = chieudai;
+                this.chieurong = chieurong;
+
+
+
+            }
+            getDientich() {
+
+                console.log("Diện tích hcn là " + this.chieudai * this.chieurong);
+            }
+            getChuVi() {
+
+                console.log("Chu vi hcn laf " + (this.chieudai + this.chieurong) * 2);
+            }
+        }
+        let chieudai = prompt("Nhập chiều dài");
+        let chieurong = prompt("Nhập chiều rộng");
+        let hcn = new hinhChuNhat(chieudai, chieurong);
+        hcn.getDientich();
+        hcn.getChuVi();
+    </script>
+</body>
+
+</html>

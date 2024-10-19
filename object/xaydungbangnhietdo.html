@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="CtoF">asfas</p>
+<p id="CtoKelvin">asfasf</p>
+
+<body>
+    <script>
+        class Temper {
+            constructor(temp) {
+                this.temp = temp;
+            }
+            getCToF() {
+                return this.temp * 1.8 + 32;
+            }
+            getCToKelvin() {
+                return this.temp + 273;
+            }
+        }
+        let doC = new Temper(25);
+        let my_F = doC.getCToF();
+        let my_K = doC.getCToKelvin();
+        document.getElementById("CtoF").innerText = "Độ F là " + my_F;
+        document.getElementById("CtoKelvin").innerText = "Độ Kelvin là " + my_K;
+
+    </script>
+</body>
+
+</html>
